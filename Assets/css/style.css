@@ -1,0 +1,12 @@
+#navBar {
+    height: 100vh;
+    width:10%;
+    background-color: #004b89;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
