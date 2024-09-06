@@ -55,7 +55,43 @@ html,
   -webkit-tap-highlight-color: transparent;
   /* 7 */
 }
-
+/* timer  stuff*/
+.container{
+    justify-content: center;
+    display: flex;
+    position: relative;
+    height: 100vh;
+}
+#countDownBox{
+    border: 1px solid #ddd;
+    position: absolute;
+    padding: 20px;
+    width: 100px;
+    text-align: center;
+    font-size: 2em;
+    background-color: #f9f9f9;
+    display: flex;
+    right: 0;
+    height: 20px;
+    align-items: center;
+}
+.button{
+    
+    justify-content: left;
+    display: flex;
+    position: absolute;
+    border-radius: 20px;
+    border-style: none;
+    margin-top: 300px;
+    right: 0;
+    color: red;
+    cursor: pointer;
+    font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+    font-size: 1.3em;
+    padding: 10px 30px;
+    
+    
+}
 /*
 1. Remove the margin in all browsers.
 2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
