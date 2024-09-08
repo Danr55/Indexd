@@ -24,7 +24,36 @@
 ::after {
   --tw-content: '';
 }
+.container {
+  align-items: center;
+  position: relative;
+}
 
+#countDownBox {
+  border: 1px solid #ddd;
+  padding: 20px;
+  align-items: center;
+  margin-left: 180px ;
+  
+}
+.resetButton{
+  position: absolute;
+  border: 1px solid #ddd;
+  padding: 40px;
+  margin-left: 600px ;
+}
+#timerButton{
+  position: absolute;
+  border: 1px solid #ddd;
+  padding: 40px;
+  margin-left: 300px ;
+}
+.button {
+  position: absolute;
+  border: 1px solid #ddd;
+  margin-left: 400px ;
+  padding: 60px;
+}
 /*
 1. Use a consistent sensible line-height in all browsers.
 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -605,7 +634,6 @@ video {
 .underline {
   text-decoration-line: underline;
 }
-
 #navBar {
   height: 100vh;
   width:10%;
