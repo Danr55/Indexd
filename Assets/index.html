@@ -26,6 +26,26 @@
              <button>🃏</button>
 
           </section>
+
+          <button id="modalBtn">Create Deck</button>
+
+          <div id="deckModal" class="modal">
+            <div class="modal-content">
+                <span id="closeBtn">&times;</span>
+                <form id="createDeck">
+                  <div class="deckForm">
+                  <label for="question">Question:</label>
+                  <input placeholder="Question" type="text">
+                  <label for="answer">Answer:</label>
+                  <input placeholder="Answer" type="text">
+                  </div>
+                  <button id="completeBtn"><img src="./Images/check_sign_icon.png"></button>
+                  <button id="addMoreBtn"><img src="./Images/add_plus_icon.png"></button>
+                </form>
+            </div>
+          </div>
+
+
             <div class="container">
               <button class = "button">Button</button>
             </div>
@@ -42,5 +62,5 @@
         </footer>
       </body>
 
-      <script src="./Assets/JS/script.js"></script>
+      <script src="./JS/script.js"></script>
 </html>
