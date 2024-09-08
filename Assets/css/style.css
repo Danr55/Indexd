@@ -617,3 +617,98 @@ video {
   align-items: center;
 
 }
+
+#modalBtn {
+  background-color: coral;
+  color:aliceblue;
+  border:solid rgb(248, 9, 9) 1px;
+  border-radius: 10px;
+  width: 100px;
+  height: 50px;
+  
+}
+
+#modalBtn:hover {
+  background-color: rgb(248, 9, 9);
+}
+
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 150%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+  background-color: #024a8945;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%; 
+  display: flex;
+  flex-direction: column;
+  height: 350px; 
+  justify-content: space-between; 
+  border-radius: 20px;
+}
+
+
+.deckForm{
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 20px;
+  line-height: 35px;
+  
+}
+
+.deckform, input{
+  width:400px ;
+  color:#000;
+}
+
+
+#completeBtn, #addMoreBtn{ 
+  height:50px;
+  width:50px;
+  margin-top: 20px;
+  margin-left: 180px;
+}
+
+
+
+#completeBtn:hover{
+  transition: 1.5s;
+  height: 55px;
+  width:55px;
+}
+
+#addMoreBtn:hover{
+  transition: 1.5s;
+  height: 55px;
+  width:55px;
+}
+
+#closeBtn {
+  color:#ccc;
+  float: right;
+  font-size: 30px;
+  position: absolute;
+  top: 15px;
+  right: 40px;
+}
+
+#closeBtn:hover,.closeBtn:focus{
+  color:#000;
+  text-decoration: none;
+  cursor:pointer;
+}
+
