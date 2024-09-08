@@ -61,3 +61,30 @@ timerButton3.addEventListener(`click`, function(event){
     
 
 });
+
+
+//This will open and close the modal
+const modal = document.getElementById('deckModal'); //Get modal element
+const modalBtn = document.getElementById('modalBtn'); //Get modal button
+const closeBtn = document.getElementById('closeBtn'); //Get close button
+
+function openModal(){
+    modal.style.display = 'block';
+}
+modalBtn.addEventListener('click', openModal); // When clicking the create deck button it will open a modal.
+
+function closeModal(){
+    modal.style.display = 'none';
+}
+
+closeBtn.addEventListener('click', closeModal); // When clicking this will close the modal.
+
+
+//This will continue the modal to add more questions and answers
+const addMoreBtn = document.getElementById('addMoreBtn');
+const createDeck = document.getElementById('createDeck');
+
+
+function addMoreQuestions(){
+
+}
