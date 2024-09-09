@@ -84,38 +84,23 @@ closeBtn.addEventListener('click', closeModal); // When clicking this will close
 const addMoreBtn = document.getElementById('addMoreBtn');
 const createDeck = document.getElementById('createDeck');
 
-
-
-
-// let deckAll = [];
+let singleDeck = [];
 
 addMoreBtn.addEventListener('click',  function(event){
     event.preventDefault();
-    
 
-    let questionEntry = document.getElementById('questionContent').value;
-    let answerEntry = document.getElementById('answerContent').value;
-    let deckSingle = [];
-    const stop = false;
-if (stop === false) {
-    
+    let questionEntry = document.getElementById('questionContent');
+    let answerEntry = document.getElementById('answerContent');
 
-let indexCard = {
-    question: questionEntry,
-    answer: answerEntry
-};
-    
-    deckSingle.push(indexCard);
-    
-    deckSingle.forEach(function(card) {
-        console.log("Question:", card.question);
-        console.log("Answer:", card.answer);
-    });
-    console.log(deckSingle);
-    
-    document.getElementById('questionContent').value = "";
-    document.getElementById('answerContent').value = "";
-} else{
-    stop = true;
-}
+    let indexCard = {
+        question: questionEntry.value,
+        answer: answerEntry.value
+    };
+
+    singleDeck.push(indexCard);
+
+    questionEntry.value = '';
+    answerEntry.value = '';
+
+    console.log(singleDeck);
 });
