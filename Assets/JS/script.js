@@ -85,6 +85,37 @@ const addMoreBtn = document.getElementById('addMoreBtn');
 const createDeck = document.getElementById('createDeck');
 
 
-function addMoreQuestions(){
 
+
+// let deckAll = [];
+
+addMoreBtn.addEventListener('click',  function(event){
+    event.preventDefault();
+    
+
+    let questionEntry = document.getElementById('questionContent').value;
+    let answerEntry = document.getElementById('answerContent').value;
+    let deckSingle = [];
+    const stop = false;
+if (stop === false) {
+    
+
+let indexCard = {
+    question: questionEntry,
+    answer: answerEntry
+};
+    
+    deckSingle.push(indexCard);
+    
+    deckSingle.forEach(function(card) {
+        console.log("Question:", card.question);
+        console.log("Answer:", card.answer);
+    });
+    console.log(deckSingle);
+    
+    document.getElementById('questionContent').value = "";
+    document.getElementById('answerContent').value = "";
+} else{
+    stop = true;
 }
+});
