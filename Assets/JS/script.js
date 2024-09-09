@@ -84,7 +84,23 @@ closeBtn.addEventListener('click', closeModal); // When clicking this will close
 const addMoreBtn = document.getElementById('addMoreBtn');
 const createDeck = document.getElementById('createDeck');
 
+let singleDeck = [];
 
-function addMoreQuestions(){
+addMoreBtn.addEventListener('click',  function(event){
+    event.preventDefault();
 
-}
+    let questionEntry = document.getElementById('questionContent');
+    let answerEntry = document.getElementById('answerContent');
+
+    let indexCard = {
+        question: questionEntry.value,
+        answer: answerEntry.value
+    };
+
+    singleDeck.push(indexCard);
+
+    questionEntry.value = '';
+    answerEntry.value = '';
+
+    console.log(singleDeck);
+});
