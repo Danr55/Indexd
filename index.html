@@ -33,6 +33,16 @@
           <button id="modalBtn">Create Deck</button>
 
           <div id="deckModal" class="modal">
+            <div class="modal-content modal-hidden">
+              <span id="closeBtn">&times;</span>
+              <form class="createDeck">
+                <div class="deckForm">
+                  <label for="question">Deck Title:</label>
+                  <input placeholder="Name your Deck" type="text" id="deckQuery">
+                </div>
+                  
+              </form>
+            </div>
             <div class="modal-content">
                 <span id="closeBtn">&times;</span>
                 <form id="createDeck">
