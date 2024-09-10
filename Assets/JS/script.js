@@ -97,15 +97,19 @@ closeBtn.addEventListener('click', closeModal); // When clicking this will close
 
 //This will continue the modal to add more questions and answers
 const addMoreBtn = document.getElementById('addMoreBtn');
-const createDeck = document.getElementById('createDeck');
+const createDeck = document.getElementsByClassName('createDeck');
+const finishDeck = document.getElementsByClassName('completeBtn');
+const deckNameWindow = document.getElementsByClassName('modal-hidden');
 
-let singleDeck = [];
+let singleDeck = [];    // array for index cards
+let decks = [];     // array for decks
 
-addMoreBtn.addEventListener('click',  function(event){
+addMoreBtn.addEventListener('click', function(event) {  //This is the button for adding indexcards to an array and storing them in local storage.
     event.preventDefault();
 
     let questionEntry = document.getElementById('questionContent');
     let answerEntry = document.getElementById('answerContent');
+    
 
     let indexCard = {
         question: questionEntry.value,
@@ -117,5 +121,19 @@ addMoreBtn.addEventListener('click',  function(event){
     questionEntry.value = '';
     answerEntry.value = '';
 
-    console.log(singleDeck);
+    localStorage.setItem('singleDeck', JSON.stringify(singleDeck));
+    
+    return singleDeck;
 });
+
+// finishDeck.addEventListener('click', function(event) {
+//     deckNameWindow.style.display = 'block';
+
+//     let deckName = deckQuery.value
+
+//     decks.push(deckName);
+
+//     console.log(decks);
+    
+// });
+
