@@ -94,6 +94,20 @@ function closeModal(){
 
 closeBtn.addEventListener('click', closeModal); // When clicking this will close the modal.
 
+// Close the modal when clicking outside of it
+window.addEventListener('click', function(event) {
+    if (event.target === modal) {
+        closeModal();
+    }
+  });
+  
+  // Close the modal when pressing the "Escape" key
+window.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeModal();
+    }
+  });
+
 
 //This will continue the modal to add more questions and answers
 const addMoreBtn = document.getElementById('addMoreBtn');
@@ -112,8 +126,8 @@ addMoreBtn.addEventListener('click', function(event) {  //This is the button for
     
 
     let indexCard = {
-        question: questionEntry.value,
-        answer: answerEntry.value
+        question: questionEntry.value.trim(),
+        answer: answerEntry.value.trim()
     };
 
     singleDeck.push(indexCard);
@@ -126,14 +140,31 @@ addMoreBtn.addEventListener('click', function(event) {  //This is the button for
     return singleDeck;
 });
 
-// finishDeck.addEventListener('click', function(event) {
-//     deckNameWindow.style.display = 'block';
 
-//     let deckName = deckQuery.value
 
-//     decks.push(deckName);
+//Function to set deck onto navbar once deck has been created
+const sideBarDecks = document.getElementById('multipleDecks');
+const completeDeck = document.getElementById('completeBtn');
 
-//     console.log(decks);
-    
-// });
+
+
+function updateSideBar(event) {
+    event.preventDefault()
+        const button = document.createElement('button');
+        const img = document.createElement('img');
+
+        img.src = './Assets/Images/deckImage.png';
+        img.alt = 'Deck Image';
+
+        //button.id = `deckButton ${deckCount}`; 
+        button.className = 'nav-button'; 
+
+        button.appendChild(img);
+
+        sideBarDecks.appendChild(button);
+
+    closeModal();
+}
+
+completeDeck.addEventListener('click', updateSideBar);
 
