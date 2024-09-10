@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="icon" type="image/x-icon" href="./Images/Indexd.png">
+        <link href="./">
         <title>Indexd</title>
       </head>
 
@@ -20,14 +21,14 @@
         <main>
           ,<h1> <img src="./Images/Indexd.png"></h1>
           <h1></h1>
-            <div class="container">
-              <button id="timerButton">Stop Timer</button>
-              <button class="button">Start Timer</button>
-              <button class="resetButton">Reset Timer</button>
+            <div class="container flex flex-col items-end p-5 mt-24">
+              <button id="timerButton" class="border border-gray-300 p-4 w-36 mb-2">Stop Timer</button>
+              <button class="button border border-gray-300 p-4 w-36 mb-2">Start Timer</button>
+              <button class="resetButton border border-gray-300 p-4 w-36">Reset Timer</button>
             </div>
-            <div id="countDownBox"></div>
+            <div id="countDownBox" class="fixed top-0 right-0 border border-gray-300 p-5 m-5"></div>
           <section id="navBar">
-             <button>🃏</button>
+             
 
           </section>
 
@@ -43,8 +44,8 @@
                     <label for="answer">Answer:</label>
                     <input placeholder="Answer" type="text" id="answerContent">
                   </div>
-                    <button id="completeBtn"><img src="./Images/check_sign_icon.png"></button>
-                    <button id="addMoreBtn"><img src="./Images/add_plus_icon.png"></button>
+                    <button id="completeBtn"><img src="./Images/check_sign_icon.png" ></button>
+                    <button id="addMoreBtn"><img src="./Images/add_plus_icon.png" ></button>
                 </form>
             </div>
           </div>
