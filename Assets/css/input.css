@@ -1,132 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .container {
   display: flex;
   flex-direction: column; 
@@ -134,32 +8,16 @@
   padding: 20px;
   margin-top: 100px; 
   position: relative;
+  width: 200px; 
 
 }
-#timerButton {
-  position: absolute;
-  border: 1px solid #ddd;
-  padding: 15px;
-  width: 150px;
-  margin-bottom: 10px; 
-  right: 0;
-}
-.button{
-  position: absolute;
-  border: 1px solid #ddd;
-  padding: 15px;
-  width: 150px;
-  margin-bottom: 24px; 
-  right: 0;
-}
-.resetButton{
-  position: absolute;
-  border: 1px solid #ddd;
-  padding: 15px;
-  width: 150px;
-  margin-bottom: 5px; 
-  right: 0;
-}
+#timerButton, .button, .resetButton {
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 150px;
+    margin-bottom: 5px; 
+    right: 0;
+  }
 #countDownBox {
   position: fixed;
   top: 0;
@@ -284,4 +142,16 @@
     color:#000;
     text-decoration: none;
     cursor:pointer;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      align-items: center; /* Center buttons on smaller screens */
+      margin-top: 20px; /* Adjust margin for smaller screens */
+    }
+  
+    #countDownBox {
+      right: 10px;
+      top: 10px; /* Adjust position for smaller screens */
+    }
   }
