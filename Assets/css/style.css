@@ -25,6 +25,7 @@
   --tw-content: '';
 }
 
+
 /*
 1. Use a consistent sensible line-height in all browsers.
 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -436,8 +437,9 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 
 img,
 video {
-  max-width: 100%;
+  /*max-width: 100%;*/
   height: auto;
+  width: 120px;
 }
 
 /* Make elements with the HTML hidden attribute stay hidden by default */
@@ -644,3 +646,4 @@ video {
 .outline {
   outline-style: solid;
 }
+
