@@ -75,6 +75,8 @@ window.onload = function(){
 startButton.onclick = function(){
     welcomeModal.style.display = 'none'; //When the start button is clicked the welcome modal will close
 };
+
+startButton.addEventListener('click', openModal) 
 // NEED TO INSERT LOGIC THAT WILL OPEN THE CARD AND DECK CREATOR MODAL AFTER THE WELCOM EMODAL??
 //This will open and close the card and deck creator modal
 const modal = document.getElementById('deckModal'); //Get modal element
