@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="./Assets/css/reset.css" />
-        <link rel="stylesheet" href="./Assets/css/input.css" />
         <link rel="stylesheet" href="./Assets/css/style.css" />
-        <link rel="icon" type="image/x-icon" href="./Images/Indexd.png">
+        <link rel="stylesheet" href="./Assets/css/input.css" />
+        <link rel="icon" type="image/x-icon" href="./Assets/Images/IndexdLogo.png">
         <title>Indexd</title>
       </head>
 
@@ -26,38 +26,31 @@
               <button class="resetButton">Reset Timer</button>
             </div>
             <div id="countDownBox"></div>
-          <section id="navBar">
-             <button>🃏</button>
+          <section id="sideBar">
+             <h2>Decks</h2>
+             <div id="multipleDecks">
+
+             </div>
 
           </section>
 
-          <button id="modalBtn">Create Deck</button>
+            <button id="modalBtn">Create Deck</button>
 
-          <div id="deckModal" class="modal">
-            <div class="modal-content modal-hidden">
-              <span id="closeBtn">&times;</span>
-              <form class="createDeck">
-                <div class="deckForm">
-                  <label for="question">Deck Title:</label>
-                  <input placeholder="Name your Deck" type="text" id="deckQuery">
-                </div>
-                  
-              </form>
-            </div>
-            <div class="modal-content">
-                <span id="closeBtn">&times;</span>
-                <form class="createDeck">
-                  <div class="deckForm">
+            <div id="deckModal" class="modal">
+              <div class="modal-content">
+                  <span id="closeBtn">&times;</span>
+                  <form id="createDeck">
+                    <div class="deckForm">
                     <label for="question">Question:</label>
                     <input placeholder="Question" type="text" id="questionContent">
                     <label for="answer">Answer:</label>
                     <input placeholder="Answer" type="text" id="answerContent">
-                  </div>
-                    <button class="completeBtn"><img src="./Images/check_sign_icon.png"></button>
-                    <button id="addMoreBtn"><img src="./Images/add_plus_icon.png"></button>
-                </form>
+                    </div>
+                    <button id="completeBtn"><img src="./Assets/Images/check_sign_icon.png"></button>
+                    <button id="addMoreBtn"><img src="./Assets/Images/add_plus_icon.png"></button>
+                  </form>
+              </div>
             </div>
-          </div>
             <div class="container">
               <button class = "button">Button</button>
             </div>
@@ -75,5 +68,5 @@
         
       </body>
 
-      <script src="./JS/script.js"></script>
+      <script src="./Assets/JS/script.js"></script>
 </html>
