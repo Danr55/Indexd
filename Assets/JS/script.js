@@ -77,7 +77,7 @@ startButton.onclick = function(){
 };
 
 startButton.addEventListener('click', openModal) 
-// NEED TO INSERT LOGIC THAT WILL OPEN THE CARD AND DECK CREATOR MODAL AFTER THE WELCOM EMODAL??
+
 //This will open and close the card and deck creator modal
 const modal = document.getElementById('deckModal'); //Get modal element
 const modalBtn = document.getElementById('modalBtn'); //Get modal button
