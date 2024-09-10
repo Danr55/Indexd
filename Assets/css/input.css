@@ -144,14 +144,3 @@
     cursor:pointer;
   }
 
-  @media (max-width: 768px) {
-    .container {
-      align-items: center; /* Center buttons on smaller screens */
-      margin-top: 20px; /* Adjust margin for smaller screens */
-    }
-  
-    #countDownBox {
-      right: 10px;
-      top: 10px; /* Adjust position for smaller screens */
-    }
-  }
