@@ -249,27 +249,31 @@
     color:#000;
   }
   
+
   
-  #completeBtn, #addMoreBtn{ 
-    height:50px;
-    width:50px;
-    margin-top: 20px;
-    margin-left: 180px;
+  .addCompleteButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+    
   }
   
-  
-  
-  #completeBtn:hover{
-    transition: 1.5s;
-    height: 55px;
-    width:55px;
+  #completeBtn:hover {
+    border-radius: 20px;
+    transition: ease-out 1.5s;
+    background-color: #024b89;
+    
   }
-  
-  #addMoreBtn:hover{
-    transition: 1.5s;
-    height: 55px;
-    width:55px;
+
+
+  #addMoreBtn:hover {
+    border-radius: 20px;
+    transition: ease-out 1.5s;
+    background-color: #024b89;
+    
   }
+ 
   
   #closeBtn {
     color:#ccc;
@@ -286,3 +290,12 @@
     cursor:pointer;
   }
 
+.footer {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  background-color:#024b89;
+  font-size: 20px;
+}
