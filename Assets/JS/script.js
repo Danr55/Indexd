@@ -111,9 +111,9 @@ window.addEventListener('keydown', function(event) {
 
 //This will continue the modal to add more questions and answers
 const addMoreBtn = document.getElementById('addMoreBtn');
-const createDeck = document.getElementsByClassName('createDeck');
-const finishDeck = document.getElementsByClassName('completeBtn');
-const deckNameWindow = document.getElementsByClassName('modal-hidden');
+const createDeck = document.getElementById('completeBtn');
+const indexEntry = document.getElementById('index-entry');
+const deckEntry = document.getElementById('deck-entry');
 
 let singleDeck = [];    // array for index cards
 let decks = [];     // array for decks
@@ -140,6 +140,20 @@ addMoreBtn.addEventListener('click', function(event) {  //This is the button for
     return singleDeck;
 });
 
+createDeck.addEventListener('click', function() {
+    if (deckEntry.classList.contains('hidden')) {
+        deckEntry.classList.remove('hidden');
+        indexEntry.classList.add('hidden');
+        createDeck.classList.add('hidden');
+        addMoreBtn.classList.add('hidden');
+    } else {
+        deckEntry.classList.add('hidden');
+        indexEntry.classList.remove('hidden');
+        createDeck.classList.remove('hidden');
+        addMoreBtn.classList.remove('hidden');
+    }
+});
+
 
 
 //Function to set deck onto navbar once deck has been created
@@ -156,7 +170,7 @@ function updateSideBar(event) {
         img.src = './Assets/Images/deckImage.png';
         img.alt = 'Deck Image';
 
-        //button.id = `deckButton ${deckCount}`; 
+        button.id = `deckButton ${deckCount}`; 
         button.className = 'nav-button'; 
 
         button.appendChild(img);

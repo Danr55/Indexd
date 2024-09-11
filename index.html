@@ -49,14 +49,19 @@
       <div class="modal-content">
         <span id="closeBtn">&times;</span>
         <form id="createDeck">
-          <div class="deckForm">
+          <div id="index-entry" class="deckForm">
             <label for="question">Question:</label>
-            <input placeholder="Question" type="text" id="questionContent">
+            <input type="text" placeholder="Add a question to this card" id="questionContent">
             <label for="answer">Answer:</label>
-            <input placeholder="Answer" type="text" id="answerContent">
+            <input type="text" placeholder="Add the answer to this question" id="answerContent">
           </div>
           <button id="completeBtn"><img src="./Assets/Images/check_sign_icon.png"></button>
           <button id="addMoreBtn"><img src="./Assets/Images/add_plus_icon.png"></button>
+          <div id="deck-entry" class="deckForm hidden">
+            <label for="deck">Deck:</label>
+            <input type="text" placeholder="Please name your deck" id="deckSubmission">
+            <input type="submit" value="Create" id="creatBtn">
+          </div>
         </form>
       </div>
     </div>
