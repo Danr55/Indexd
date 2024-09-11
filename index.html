@@ -1,92 +1,88 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="./Assets/css/reset.css" />
-  <link rel="stylesheet" href="./Assets/css/style.css" />
-  <link rel="stylesheet" href="./Assets/css/input.css" />
-  <link rel="icon" type="image/x-icon" href="./Assets/Images/IndexdLogo.png">
-  <title>Indexd</title>
-</head>
-  
-<body>
-  <header>
-    <nav>
-
-    </nav>
-  </header>
-
-
-
-  <main class="bg-green-300">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./Assets/css/reset.css" />
+    <link rel="stylesheet" href="./Assets/css/style.css" />
+    <link rel="stylesheet" href="./Assets/css/input.css" />
+    <link rel="icon" type="image/x-icon" href="./Assets/Images/IndexdLogo.png">
+    <title>Indexd</title>
+  </head>
     
-    <!-- This is the welcome modal -->
-    <div id="welcomeModal" class="modal">
-      <img id="welcomeLogo" a href="Assets\Images\IndexdLogo.png">
-      <button id="startButton" class="button">Get started</button>
-    </div>
-    <!-- End of welcome modal -->
-    <div>
-      <button id="modalBtn">Create Deck</button>
-    </div>
-   
-  
-      <div class="container">
-         <h1 ><img src="./Assets/Images/IndexdLogo.png" id="logo"></h1>
-         <h2 id="quote">Study Success One Card At A Time &copy</h2>
-           <button class="button ">Start Timer</button>
-           <button id="timerButton"  >Stop Timer</button>
-           <button class="resetButton ">Reset Timer</button>
-      </div>
-      <div id="countDownBox">
-      </div>
- <section id="sideBar">
-   <h2>Decks</h2>
-      <div id="multipleDecks">
-<!--  This is where decks are stored in the sidebar        -->
-      </div>
- </section>
+  <body>
+    <header> 
+      <section> <!--Starting button to open the first modal.-->
+          <div id="welcomeModal" class="modal">
+          <img id="welcomeLogo" a href="Assets\Images\IndexdLogo.png">
+          <button id="startButton" class="button">Get started</button>
+        </div>
+      </section>
 
-    <div id="deckModal" class="modal">
-      <div class="modal-content">
-        <span id="closeBtn">&times;</span>
-        <form id="createDeck">
-          <div id="index-entry" class="deckForm">
-            <label for="question">Question:</label>
-            <input type="text" placeholder="Add a question to this card" id="questionContent">
-            <label for="answer">Answer:</label>
-            <input type="text" placeholder="Add the answer to this question" id="answerContent">
-          </div>
-          <div class="addCompleteButtons">
-          <button id="completeBtn"><img src="./Assets/Images/CreateDeck.png"></button>
-          <button id="addMoreBtn"><img src="./Assets/Images/AddMore.png"></button>
-          </div>
-          <div id="deck-entry" class="deckForm hidden">
-            <label for="deck">Deck:</label>
-            <input type="text" placeholder="Please name your deck" id="deckSubmission">
-            <input type="submit" value="Create" id="creatBtn">
-          </div>
-        </form>
-      </div>
-    </div>
+      <section> <!--Create deck button outside of the start button-->
+        <div>
+         <button id="modalBtn">Create Deck</button>
+        </div>
+      </section>
+
+      <section> <!--This is the timer-->
+        <div class="container">
+          <h1 ><img src="./Assets/Images/IndexdLogo.png" id="logo"></h1>
+          <h2 id="quote">Study Success One Card At A Time &copy</h2>
+          <button class="button ">Start Timer</button>
+          <button id="timerButton"  >Stop Timer</button>
+          <button class="resetButton ">Reset Timer</button>
+        </div>
+        <div id="countDownBox">
+        </div>
+      </section>
+    </header>
     
-  </main>
+    <main class="bg-green-300"></main>
+      <section id="sideBar"> <!--Sidebar that holds created decks-->
+        <h2>Decks</h2>
+        <div id="multipleDecks">
+        </div>
+      </section>
 
-  <footer class="footer">
-    <div>
-      <p>Project 1: Group 1</p>
-    </div>
-    <div id="bottom-footer">
-      <p>&copy Indexd</p>
-    </div>
+      <section> <!--Modal-->
+        <div id="deckModal" class="modal">
+          <div class="modal-content">
+            <span id="closeBtn">&times;</span>
+            <form id="createDeck">
+              <div id="index-entry" class="deckForm">
+                <label for="question">Question:</label>
+                <input type="text" placeholder="Add a question to this card" id="questionContent">
+                <label for="answer">Answer:</label>
+                <input type="text" placeholder="Add the answer to this question" id="answerContent">
+              </div>
+              <div class="addCompleteButtons">
+                <button id="completeBtn"><img src="./Assets/Images/CreateDeck.png"></button>
+                <button id="addMoreBtn"><img src="./Assets/Images/AddMore.png"></button>
+              </div>
+              <div id="deck-entry" class="deckForm hidden">
+                <label for="deck">Deck:</label>
+                <input type="text" placeholder="Please name your deck" id="deckSubmission">
+                <input type="submit" value="Create" id="creatBtn">
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>     
+    </main>
 
-        </footer>
-        
-      </body>
+    <footer class="footer">
+      <div>
+        <p>Project 1: Group 1</p>
+      </div>
+      <div id="bottom-footer">
+        <p>&copy Indexd</p>
+      </div>
+    </footer>
 
-<script src="./Assets/JS/script.js"></script>
+    <script src="./Assets/JS/script.js"></script>
+  </body>
 
 </html>
