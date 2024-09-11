@@ -172,12 +172,11 @@
   }
   
 
-  .addCompleteButtons {
-    display: flex;
+  .addCompleteButtons{
+    display:flex;
     flex-direction: row;
     justify-content: center;
     justify-content: space-between;
-    
   }
   
   #completeBtn:hover {
