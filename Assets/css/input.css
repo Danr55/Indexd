@@ -213,7 +213,8 @@
     border:solid rgb(248, 9, 9) 1px;
     border-radius: 10px;
     width: 100px;
-    height: 50px; 
+    height: 50px;
+    
   }
   
   #modalBtn:hover {
@@ -264,7 +265,6 @@
   }
   
 
-  
   .addCompleteButtons {
     display: flex;
     flex-direction: row;
