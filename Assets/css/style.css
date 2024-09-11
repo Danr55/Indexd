@@ -25,7 +25,6 @@
   --tw-content: '';
 }
 
-
 /*
 1. Use a consistent sensible line-height in all browsers.
 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -552,60 +551,119 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 
 
 
-.visible {
-  visibility: visible;
-}
-
-.collapse {
-  visibility: collapse;
-}
-
-.relative {
-  position: relative;
-}
-
 .block {
   display: block;
 }
 
-.table {
-  display: table;
-}
 
-.contents {
-  display: contents;
-}
 
-.hidden {
-  display: none;
-}
-
-.border-collapse {
-  border-collapse: collapse;
-}
-
-.transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.resize {
-  resize: both;
-}
-
-.border {
-  border-width: 1px;
-}
 
 .bg-green-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(134 239 172 / var(--tw-bg-opacity));
 }
 
-.underline {
-  text-decoration-line: underline;
+#sideBar {
+  height: 100vh;
+  width:10%;
+  background-color: #024b89;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
 }
 
-.outline {
-  outline-style: solid;
+.nav-button:hover {
+  background-color: #021e38;
+  transition: ease-in 0.5s;
+}
+
+#modalBtn {
+  background-color: coral;
+  color:aliceblue;
+  border:solid rgb(248, 9, 9) 1px;
+  border-radius: 10px;
+  width: 100px;
+  height: 50px;
+}
+
+#modalBtn:hover {
+  background-color: rgb(248, 9, 9);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 150%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #024a8945;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  justify-content: space-between;
+  border-radius: 20px;
+}
+
+.deckForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 20px;
+  line-height: 35px;
+}
+
+.deckform, input{
+  width:400px ;
+  color:#000;
+}
+
+#completeBtn, #addMoreBtn{
+  height:50px;
+  width:50px;
+  margin-top: 20px;
+  margin-left: 180px;
+}
+
+#completeBtn:hover{
+  transition: 1.5s;
+  height: 55px;
+  width:55px;
+}
+
+#addMoreBtn:hover{
+  transition: 1.5s;
+  height: 55px;
+  width:55px;
+}
+
+#closeBtn {
+  color:#ccc;
+  float: right;
+  font-size: 30px;
+  position: absolute;
+  top: 15px;
+  right: 40px;
+}
+
+#closeBtn:hover,.closeBtn:focus{
+  color:#000;
+  text-decoration: none;
+  cursor:pointer;
 }
 

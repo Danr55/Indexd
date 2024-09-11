@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="./Assets/css/reset.css" />
-        <link rel="stylesheet" href="./Assets/css/style.css" />
-        <link rel="stylesheet" href="./Assets/css/input.css" />
-        <link rel="icon" type="image/x-icon" href="./Assets/Images/IndexdLogo.png">
-        <title>Indexd</title>
-      </head>
 
-      <body>
-        <header>
-          <nav>
-            
-          </nav>
-        </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./Assets/css/reset.css" />
+  <link rel="stylesheet" href="./Assets/css/style.css" />
+  <link rel="stylesheet" href="./Assets/css/input.css" />
+  <link rel="icon" type="image/x-icon" href="./Assets/Images/IndexdLogo.png">
+  <title>Indexd</title>
+</head>
+
+      
+
+          </section>
+          
+            <button id="modalBtn">Create Deck</button>
+<body>
+  <header>
+    <nav>
+
+    </nav>
+  </header>
+
 
         <main >
           
@@ -32,11 +39,6 @@
              <h2>Decks</h2>
              <div id="multipleDecks">
 
-             </div>
-
-          </section>
-          <div class="container">
-            <button id="modalBtn">Create Deck</button>
 
             <div id="deckModal" class="modal">
               <div class="modal-content">
@@ -48,27 +50,58 @@
                     <label for="answer">Answer:</label>
                     <input placeholder="Answer" type="text" id="answerContent">
                     </div>
-                    <button id="completeBtn"><img src="./Assets/Images/check_sign_icon.png"></button>
-                    <button id="addMoreBtn"><img src="./Assets/Images/add_plus_icon.png"></button>
+                      <div class="addCompleteButtons">
+                    <button id="completeBtn"><img src="./Assets/Images/CreateDeck.png"></button>
+                    <button id="addMoreBtn"><img src="./Assets/Images/AddMore.png"></button>
+                      </div>
                   </form>
               </div>
             </div>
-          </div>
-              
-            </div>
+            
         </main>
 
-        <footer class="footer">
-            <div>
-              <p>Project 1: Group 1</p>
-            </div>
-            <div id="bottom-footer">
-              <p>&copy Indexd</p>
-            </div>
+
+    </section>
+
+    <!-- <button id="modalBtn">Create Deck</button> -->
+
+    <div id="deckModal" class="modal">
+      <div class="modal-content">
+        <span id="closeBtn">&times;</span>
+        <form id="createDeck">
+          <div id="index-entry" class="deckForm">
+            <label for="question">Question:</label>
+            <input type="text" placeholder="Add a question to this card" id="questionContent">
+            <label for="answer">Answer:</label>
+            <input type="text" placeholder="Add the answer to this question" id="answerContent">
+          </div>
+          <button id="completeBtn"><img src="./Assets/Images/check_sign_icon.png"></button>
+          <button id="addMoreBtn"><img src="./Assets/Images/add_plus_icon.png"></button>
+          <div id="deck-entry" class="deckForm hidden">
+            <label for="deck">Deck:</label>
+            <input type="text" placeholder="Please name your deck" id="deckSubmission">
+            <input type="submit" value="Create" id="creatBtn">
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="container">
+      <button class="button">Button</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <p>Project 1: Group 1</p>
+    </div>
+    <div id="bottom-footer">
+      <p>&copy Indexd</p>
+    </div>
 
         </footer>
         
       </body>
 
-      <script src="./Assets/JS/script.js"></script>
+<script src="./Assets/JS/script.js"></script>
+
 </html>

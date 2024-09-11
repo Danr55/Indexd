@@ -62,8 +62,23 @@ timerButton3.addEventListener(`click`, function(event){
 
 });
 
+// This will close the welcome modal and prompt the card and deck creator modal to open//
+const welcomeModal = document.getElementById('welcomeModal'); //Get modal element
 
-//This will open and close the modal
+const startButton = document.getElementById('startButton'); //Get start button
+
+window.onload = function(){
+    welcomeModal.style.display = 'flex'; //Displays the welcome modal when the page loads
+    console.log('Page has loaded');
+}; 
+
+startButton.onclick = function(){
+    welcomeModal.style.display = 'none'; //When the start button is clicked the welcome modal will close
+};
+
+startButton.addEventListener('click', openModal) 
+
+//This will open and close the card and deck creator modal
 const modal = document.getElementById('deckModal'); //Get modal element
 const modalBtn = document.getElementById('modalBtn'); //Get modal button
 const closeBtn = document.getElementById('closeBtn'); //Get close button
@@ -96,9 +111,9 @@ window.addEventListener('keydown', function(event) {
 
 //This will continue the modal to add more questions and answers
 const addMoreBtn = document.getElementById('addMoreBtn');
-const createDeck = document.getElementsByClassName('createDeck');
-const finishDeck = document.getElementsByClassName('completeBtn');
-const deckNameWindow = document.getElementsByClassName('modal-hidden');
+const createDeck = document.getElementById('completeBtn');
+const indexEntry = document.getElementById('index-entry');
+const deckEntry = document.getElementById('deck-entry');
 
 let singleDeck = [];    // array for index cards
 let decks = [];     // array for decks
@@ -125,6 +140,20 @@ addMoreBtn.addEventListener('click', function(event) {  //This is the button for
     return singleDeck;
 });
 
+createDeck.addEventListener('click', function() {
+    if (deckEntry.classList.contains('hidden')) {
+        deckEntry.classList.remove('hidden');
+        indexEntry.classList.add('hidden');
+        createDeck.classList.add('hidden');
+        addMoreBtn.classList.add('hidden');
+    } else {
+        deckEntry.classList.add('hidden');
+        indexEntry.classList.remove('hidden');
+        createDeck.classList.remove('hidden');
+        addMoreBtn.classList.remove('hidden');
+    }
+});
+
 
 
 //Function to set deck onto navbar once deck has been created
@@ -132,7 +161,7 @@ const sideBarDecks = document.getElementById('multipleDecks');
 const completeDeck = document.getElementById('completeBtn');
 
 
-
+// still working waiting on deck name modal
 function updateSideBar(event) {
     event.preventDefault()
         const button = document.createElement('button');
@@ -141,7 +170,7 @@ function updateSideBar(event) {
         img.src = './Assets/Images/deckImage.png';
         img.alt = 'Deck Image';
 
-        //button.id = `deckButton ${deckCount}`; 
+        button.id = `deckButton ${deckCount}`; 
         button.className = 'nav-button'; 
 
         button.appendChild(img);

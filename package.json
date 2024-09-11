@@ -4,7 +4,7 @@
   "description": "Project-1 Indexd",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx tailwindcss -i ./Assets/css/input.css -o ./Assets/css/style.css --watch"
   },
   "keywords": [],
   "author": "",
