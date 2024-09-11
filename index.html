@@ -11,18 +11,14 @@
   <link rel="icon" type="image/x-icon" href="./Assets/Images/IndexdLogo.png">
   <title>Indexd</title>
 </head>
-
-      
-
-          </section>
-          
-            <button id="modalBtn">Create Deck</button>
+  
 <body>
   <header>
     <nav>
 
     </nav>
   </header>
+
 
 
   <main class="bg-green-300">
@@ -33,7 +29,9 @@
       <button id="startButton" class="button">Get started</button>
     </div>
     <!-- End of welcome modal -->
-
+    <div>
+      <button id="modalBtn">Create Deck</button>
+    </div>
     <h1></h1>
     <div class="container">
       <button id="timerButton">Stop Timer</button>
@@ -41,11 +39,26 @@
       <button class="resetButton">Reset Timer</button>
     </div>
     <div id="countDownBox"></div>
-    <section id="sideBar">
+ <section id="sideBar">
       <h2>Decks</h2>
       <div id="multipleDecks">
       </div>
-    </section>
+          
+      <div class="container">
+         <h1 ><img src="./Assets/Images/IndexdLogo.png" id="logo"></h1>
+         <h2 id="quote">Study Success One Card At A Time &copy</h2>
+           <button class="button ">Start Timer</button>
+           <button id="timerButton"  >Stop Timer</button>
+           <button class="resetButton ">Reset Timer</button>
+      </div>
+      <div id="countDownBox">
+      </div>
+ <section id="sideBar">
+   <h2>Decks</h2>
+      <div id="multipleDecks">
+<!--  This is where decks are stored in the sidebar        -->
+      </div>
+ </section>
 
     <div id="deckModal" class="modal">
       <div class="modal-content">
