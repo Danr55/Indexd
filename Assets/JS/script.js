@@ -62,8 +62,23 @@ timerButton3.addEventListener(`click`, function(event){
 
 });
 
+// This will close the welcome modal and prompt the card and deck creator modal to open//
+const welcomeModal = document.getElementById('welcomeModal'); //Get modal element
 
-//This will open and close the modal
+const startButton = document.getElementById('startButton'); //Get start button
+
+window.onload = function(){
+    welcomeModal.style.display = 'flex'; //Displays the welcome modal when the page loads
+    console.log('Page has loaded');
+}; 
+
+startButton.onclick = function(){
+    welcomeModal.style.display = 'none'; //When the start button is clicked the welcome modal will close
+};
+
+startButton.addEventListener('click', openModal) 
+
+//This will open and close the card and deck creator modal
 const modal = document.getElementById('deckModal'); //Get modal element
 const modalBtn = document.getElementById('modalBtn'); //Get modal button
 const closeBtn = document.getElementById('closeBtn'); //Get close button
@@ -132,7 +147,7 @@ const sideBarDecks = document.getElementById('multipleDecks');
 const completeDeck = document.getElementById('completeBtn');
 
 
-
+// still working waiting on deck name modal
 function updateSideBar(event) {
     event.preventDefault()
         const button = document.createElement('button');
