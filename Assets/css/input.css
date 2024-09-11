@@ -177,14 +177,29 @@
   
   #sideBar {
     height: 100vh;
-    width:10%;
+    width:15%;
     background-color: #024b89;
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    border-radius: 0 20px 20px 0;
   
+  }
+
+  .clearDecks {
+    position: absolute;
+    display: inline-block;
+    bottom: 10px;
+    border: solid 5px #91b7a9;
+    padding: 10px;
+    transition: ease-in .5s;
+    border-radius: 20px;
+  }
+
+  .clearDecks:hover {
+    background-color: #91b7a946;
   }
   
   .nav-button:hover {
@@ -198,8 +213,7 @@
     border:solid rgb(248, 9, 9) 1px;
     border-radius: 10px;
     width: 100px;
-    height: 50px;
-    
+    height: 50px; 
   }
   
   #modalBtn:hover {
@@ -249,27 +263,31 @@
     color:#000;
   }
   
+
   
-  #completeBtn, #addMoreBtn{ 
-    height:50px;
-    width:50px;
-    margin-top: 20px;
-    margin-left: 180px;
+  .addCompleteButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+    
   }
   
-  
-  
-  #completeBtn:hover{
-    transition: 1.5s;
-    height: 55px;
-    width:55px;
+  #completeBtn:hover {
+    border-radius: 20px;
+    transition: ease-out 1.5s;
+    background-color: #024b89;
+    
   }
-  
-  #addMoreBtn:hover{
-    transition: 1.5s;
-    height: 55px;
-    width:55px;
+
+
+  #addMoreBtn:hover {
+    border-radius: 20px;
+    transition: ease-out 1.5s;
+    background-color: #024b89;
+    
   }
+ 
   
   #closeBtn {
     color:#ccc;
@@ -285,10 +303,18 @@
     text-decoration: none;
     cursor:pointer;
   }
-
+  
   .hidden {
     display: none;
   }
 
-  
+.footer {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  background-color:#024b89;
+  font-size: 20px;
+}
 

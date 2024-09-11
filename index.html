@@ -12,12 +12,18 @@
   <title>Indexd</title>
 </head>
 
+      
+
+          </section>
+          
+            <button id="modalBtn">Create Deck</button>
 <body>
   <header>
     <nav>
 
     </nav>
   </header>
+
 
   <main class="bg-green-300">
     
@@ -39,11 +45,31 @@
       <h2>Decks</h2>
       <div id="multipleDecks">
 
-      </div>
+
+            <div id="deckModal" class="modal">
+              <div class="modal-content">
+                  <span id="closeBtn">&times;</span>
+                  <form id="createDeck">
+                    <div class="deckForm">
+                    <label for="question">Question:</label>
+                    <input placeholder="Question" type="text" id="questionContent">
+                    <label for="answer">Answer:</label>
+                    <input placeholder="Answer" type="text" id="answerContent">
+                    </div>
+                      <div class="addCompleteButtons">
+                    <button id="completeBtn"><img src="./Assets/Images/CreateDeck.png"></button>
+                    <button id="addMoreBtn"><img src="./Assets/Images/AddMore.png"></button>
+                      </div>
+                  </form>
+              </div>
+            </div>
+            
+        </main>
+
 
     </section>
 
-    <button id="modalBtn">Create Deck</button>
+    <!-- <button id="modalBtn">Create Deck</button> -->
 
     <div id="deckModal" class="modal">
       <div class="modal-content">
@@ -78,11 +104,9 @@
       <p>&copy Indexd</p>
     </div>
 
-  </footer>
-
-</body>
-
-<script src="./JS/script.js"></script>
+        </footer>
+        
+      </body>
 
 <script src="./Assets/JS/script.js"></script>
 

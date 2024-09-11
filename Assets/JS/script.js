@@ -161,7 +161,7 @@ const sideBarDecks = document.getElementById('multipleDecks');
 const completeDeck = document.getElementById('completeBtn');
 
 
-
+// still working waiting on deck name modal
 function updateSideBar(event) {
     event.preventDefault()
         const button = document.createElement('button');
