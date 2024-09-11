@@ -303,6 +303,10 @@
     text-decoration: none;
     cursor:pointer;
   }
+  
+  .hidden {
+    display: none;
+  }
 
 .footer {
   display:flex;
@@ -313,3 +317,4 @@
   background-color:#024b89;
   font-size: 20px;
 }
+
