@@ -417,7 +417,7 @@ Make sure disabled buttons don't get the pointer cursor.
    This can trigger a poorly considered lint error in some tools but is included by design.
 */
 
-img,
+
 svg,
 video,
 canvas,
@@ -435,12 +435,6 @@ object {
 Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
 */
 
-img,
-video {
-  /*max-width: 100%;*/
-  height: auto;
-  width: 120px;
-}
 
 /* Make elements with the HTML hidden attribute stay hidden by default */
 
@@ -556,39 +550,7 @@ video {
   --tw-contain-style:  ;
 }
 
-.container {
-  width: 100%;
-}
 
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
 
 .visible {
   visibility: visible;
