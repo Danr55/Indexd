@@ -3,170 +3,80 @@
 @tailwind utilities;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .container {
-  display: flex;
+  /* display: flex;
   flex-direction: column; 
   align-items: flex-end; 
   padding: 20px;
   margin-top: 100px; 
   position: relative;
-
+ 
+  border: 1px solid black; */
+  
+  padding: 40px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+  width: 100%;
+  height: 160px;
 }
-#timerButton {
+#startButton{
+  position: relative;
+}
+#quote{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 10px;
+  top: 120px;
+  left: 60px;
   position: absolute;
-  border: 1px solid #ddd;
-  padding: 15px;
-  width: 150px;
-  margin-bottom: 10px; 
-  right: 0;
+  
 }
 .button{
-  position: absolute;
   border: 1px solid #ddd;
-  padding: 15px;
-  width: 150px;
-  margin-bottom: 24px; 
-  right: 0;
-}
-.resetButton{
-  position: absolute;
-  border: 1px solid #ddd;
-  padding: 15px;
-  width: 150px;
+  padding: 3px;
+  width: 100px;
   margin-bottom: 5px; 
+  top: 100px;
+  position: absolute;
   right: 0;
+  font-size: 10px;
 }
+#timerButton {
+    border: 1px solid #ddd;
+    padding: 3px;
+    width: 100px;
+    margin-bottom: 5px; 
+    top: 80px;
+   position: absolute;
+   right: 0;
+   font-size: 10px;
+    
+  }
+  #logo{
+    top: 10px;
+    width: 130px;
+    left: 50px;
+    position: absolute;
+  }
+ 
+  .resetButton{
+    border: 1px solid #ddd;
+    padding: 3px;
+    width: 100px;
+    margin-bottom: 5px; 
+    top: 120px;
+    position: absolute;
+    right: 0;
+    font-size: 10px;
+  }
 #countDownBox {
   position: fixed;
   top: 0;
   right: 0;
   border: 1px solid #ddd;
-  padding: 20px;
-  margin: 20px;
+  padding: 15px;
+  
+  background-color: white;
 } 
 
 #sideBar, h2 {
@@ -177,14 +87,29 @@
   
   #sideBar {
     height: 100vh;
-    width:10%;
+    width:15%;
     background-color: #024b89;
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    border-radius: 0 20px 20px 0;
   
+  }
+
+  .clearDecks {
+    position: absolute;
+    display: inline-block;
+    bottom: 10px;
+    border: solid 5px #91b7a9;
+    padding: 10px;
+    transition: ease-in .5s;
+    border-radius: 20px;
+  }
+
+  .clearDecks:hover {
+    background-color: #91b7a946;
   }
   
   .nav-button:hover {
@@ -249,27 +174,29 @@
     color:#000;
   }
   
-  
-  #completeBtn, #addMoreBtn{ 
-    height:50px;
-    width:50px;
-    margin-top: 20px;
-    margin-left: 180px;
+
+  .addCompleteButtons{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
   }
   
-  
-  
-  #completeBtn:hover{
-    transition: 1.5s;
-    height: 55px;
-    width:55px;
+  #completeBtn:hover {
+    border-radius: 20px;
+    transition: ease-out 1.5s;
+    background-color: #024b89;
+    
   }
-  
-  #addMoreBtn:hover{
-    transition: 1.5s;
-    height: 55px;
-    width:55px;
+
+
+  #addMoreBtn:hover {
+    border-radius: 20px;
+    transition: ease-out 1.5s;
+    background-color: #024b89;
+    
   }
+ 
   
   #closeBtn {
     color:#ccc;
@@ -285,4 +212,40 @@
     text-decoration: none;
     cursor:pointer;
   }
+  
+  .hidden {
+    display: none;
+  }
 
+.footer {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  background-color:#024b89;
+  font-size: 20px;
+}
+
+.randomStudy {
+  display: grid;
+  
+}
+
+.randomStudy {
+  background-color: white;
+  border-radius: 10px;
+  padding:30px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+ @media screen and (max-width: 768) {
+  .container{
+    flex-direction: column;
+  }
+
+ }
