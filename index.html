@@ -17,27 +17,23 @@
   </header>
 
   <main class="bg-green-300 fixed">
-    <section> <!--Starting button to open the first modal.-->
-      <div id="welcomeModal" class="modal">
-        <div class="modal-content bg-gray-100">
+    <section id="welcomeModal" class="fixed inset-0 z-10 w-full h-[100%] overflow-auto bg-black bg-opacity-40">
+      <!--Starting button to open the first modal.-->
+      <div
+        class="bg-[#024a8945] mx-auto my-[15%] p-5 border border-gray-400 w-[60%] flex flex-col h-[450px] justify-between rounded-[20px]">
 
-          <div class="text-center mt-1"></div>
-          <span id="closeBtn">&times;</span>
-          <p>Indexd is a flashcard app that helps you study more efficiently. Create your own decks and study them at
-            your own pace. You can also use the timer to help you study for a set amount of time.</p>
+        <span id="closeBtn">&times;</span>
 
-          <div class="relative h-screen">
-            <button
-              class="mt-2 absolute top-[100px] right-0 bg-blue-500 text-white px-4 py-2 rounded-md">
-              Get started</button>
-          </div>
-          
-          <div>
-            <img class="max-w-full max-h-10 mx-auto object-contain" img src="Assets\Images\IndexdLogo.png"
-              alt="Indexd logo and tagline">
-          </div>
+        <p class="flex text-white px-4">Indexd is a flashcard app that helps you study more efficiently. Create your own
+          decks and study them at
+          your own pace. You can also use the timer to help you study for a set amount of time.</p>
+        <br>
+        <button id="startButton" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Get
+          started</button>
 
-        </div>
+        <img class="flex object-center max-w-full max-h-80 mx-auto object-contain" img
+          src="Assets\Images\IndexdLogo.png" alt="Indexd logo and tagline">
+
       </div>
     </section>
 
@@ -59,24 +55,24 @@
       </div>
     </section>
 
-     <section class="studySection"> 
+    <section class="studySection">
       <section id="sideBar"> <!--Sidebar that holds created decks-->
         <h2>Decks</h2>
         <div id="multipleDecks">
         </div>
       </section>
-     
-    <section class="main-section">
-      <section class="randomStudy"> <!--Deck Random-->
-            <div class="indexCards">
-              <h2 class="subjectName">Test Deck1</h2>
-                <div id="questionContainer"></div>
-                <div id="answerContainer"></div>
-                <button id="revealButton">Reveal Answer</button>
-                <button id="nextButton">Next Question</button>
-            </div>
+
+      <section class="main-section">
+        <section class="randomStudy"> <!--Deck Random-->
+          <div class="indexCards">
+            <h2 class="subjectName">Test Deck1</h2>
+            <div id="questionContainer"></div>
+            <div id="answerContainer"></div>
+            <button id="revealButton">Reveal Answer</button>
+            <button id="nextButton">Next Question</button>
+          </div>
+        </section>
       </section>
-    </section>
 
       <section> <!--Modal-->
         <div id="deckModal" class="modal">
