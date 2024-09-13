@@ -16,6 +16,7 @@ const indexEntry = document.getElementById('index-entry');
 const deckEntry = document.getElementById('deck-entry');
 const sideBarDecks = document.getElementById('multipleDecks');
 const completeDeck = document.getElementById('completeDeck');
+const studyCards =document.getElementById('studyCards');
 
 let singleDeck = [];    // array for index cards
 let decks = [];     // array for decks
@@ -76,13 +77,13 @@ window.onload = function(){
     console.log('Page has loaded');
     
     const keys = Object.keys(localStorage);
-
     const hasDecks = keys.some(key => key.startsWith('Deck:'));
 
     if(hasDecks){
         displayDecks();
+        welcomeModal.style.display = 'none'; // Hide the welcome modal if decks exist
     } else {
-        welcomeModal.style.display = 'flex'; //Displays the welcome modal when the page loads
+        welcomeModal.style.display = 'flex'; // Display the welcome modal if no decks
     }
 }; 
 
@@ -194,17 +195,22 @@ function updateSideBar(event) {
         button.textContent = d.deckName; // Show deck name on button
 
         button.appendChild(img);
+        button.addEventListener('click', (event) => displayRandomStudy(event));
         sideBarDecks.appendChild(button);
     });
 
     singleDeck = []; // Reset singleDeck after creating the deck
     localStorage.removeItem('singleDeck'); // Clear localStorage for singleDeck
 
-    closeModal(); // Assuming this function closes the modal
+    closeModal(); 
     displayDecks();
 }
 
-// completeDeck.addEventListener('click', updateSideBar);
+if (completeDeck) {
+    completeDeck.addEventListener('click', updateSideBar);
+} else {
+    console.error("Element with id 'completeDeck' not found");
+}
 
 function displayDecks() {
     sideBarDecks.innerHTML = ''; // Clear existing sidebar content
@@ -225,9 +231,71 @@ function displayDecks() {
             button.textContent = deck.deckName // Show deck name on button
 
             button.appendChild(img);
+            button.addEventListener('click', (event) => displayRandomStudy(event));
             sideBarDecks.appendChild(button);
         }
     });
 }
+
+function displayIndexCard(){
+    studyCards.style.display = 'block';
+}
+
+function displayRandomStudy(event) {
+    displayIndexCard();
+  const button = event.target.parentNode.innerText;
+  function getDeckFromStorage() {
+    const key = `Deck:${button}`;
+    const deckData = localStorage.getItem(key);
+    if (deckData) {
+        return JSON.parse(deckData);
+    } else {
+        console.log(`No deck found with name: ${deckName}`);
+        return null;
+    }
+
+}
+
+const retrievedDeck = getDeckFromStorage();
+
+if (retrievedDeck && retrievedDeck.singleDeck) {
+    const deck = retrievedDeck.singleDeck;
+
+    function displayRandomQuestion() {
+            const randomIndex = Math.floor(Math.random() * deck.length);
+            const selectedQuestion = deck[randomIndex];
+
+            // Display the question
+            const questionElement = document.getElementById('questionContainer');
+            questionElement.innerText = selectedQuestion.question;
+
+            // Hide the answer initially
+            const answerElement = document.getElementById('answerContainer');
+            answerElement.innerText = ''; // Clear the answer text
+
+            // Set up the reveal button
+            const revealButton = document.getElementById('revealButton');
+            revealButton.onclick = function() {
+                const answerElement = document.getElementById('answerContainer');
+                answerElement.innerText = selectedQuestion.answer;
+            };
+        }
+
+        // Initially display a random question
+        displayRandomQuestion();
+
+        // Set up the next button
+        const nextButton = document.getElementById('nextButton');
+        nextButton.onclick = function() {
+
+            displayRandomQuestion(); // Display a new random question when clicked
+        };
+    } else {
+        console.log("Deck is empty or not found.");
+}
+
+}
+
+   
 
 
