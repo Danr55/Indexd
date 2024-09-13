@@ -1,63 +1,80 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./Assets/css/reset.css" />
-    <link rel="stylesheet" href="./Assets/css/style.css" />
-    <link rel="stylesheet" href="./Assets/css/input.css" />
-    <link rel="icon" type="image/x-icon" href="./Assets/Images/IndexdLogo.png">
-    <title>Indexd</title>
-  </head>
-    
-  <body>
-    <header>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./Assets/css/reset.css" />
+  <link rel="stylesheet" href="./Assets/css/style.css" />
+  <link rel="stylesheet" href="./Assets/css/input.css" />
+  <link rel="icon" type="image/x-icon" href="./Assets/Images/IndexdLogo.png">
+  <title>Indexd</title>
+</head>
 
-    <main class="bg-green-300">
-      <section> <!--Starting button to open the first modal.-->
-          <div id="welcomeModal" class="modal">
-          <img id="welcomeLogo" a href="Assets\Images\IndexdLogo.png">
-          <button id="startButton" class="button">Get started</button>
-        </div>
-      </section>
+<body>
+  <header>
+  </header>
 
-      <section> <!--Create deck button outside of the start button-->
-        <div>
-         <button id="modalBtn">Create Deck</button>
-        </div>
-      </section>
+  <main class="bg-green-300 fixed">
+    <section> <!--Starting button to open the first modal.-->
+      <div id="welcomeModal" class="modal">
+        <div class="modal-content bg-gray-100">
 
-      <section> <!--This is the timer-->
-        <div class="container">
-          <h1 ><img src="./Assets/Images/IndexdLogo.png" id="logo"></h1>
-          <h2 id="quote">Study Success One Card At A Time &copy</h2>
-          <button class="button ">Start Timer</button>
-          <button id="timerButton"  >Stop Timer</button>
-          <button class="resetButton ">Reset Timer</button>
-        </div>
-        <div id="countDownBox">
-        </div>
-      </section>
+          <div class="text-center mt-1"></div>
+          <span id="closeBtn">&times;</span>
+          <p>Indexd is a flashcard app that helps you study more efficiently. Create your own decks and study them at
+            your own pace. You can also use the timer to help you study for a set amount of time.</p>
 
-      
-      <section id="sideBar"> <!--Sidebar that holds created decks-->
-        <h2>Decks</h2>
-        <div id="multipleDecks">
+          <div class="relative h-screen">
+            <button
+              class="mt-2 absolute top-[100px] right-0 bg-blue-500 text-white px-4 py-2 rounded-md">
+              Get started</button>
+          </div>
+          
+          <div>
+            <img class="max-w-full max-h-10 mx-auto object-contain" img src="Assets\Images\IndexdLogo.png"
+              alt="Indexd logo and tagline">
+          </div>
+
         </div>
-      </section>
-     
+      </div>
+    </section>
+
+    <section> <!--Create deck button outside of the start button-->
+      <div>
+        <button id="modalBtn">Create Deck</button>
+      </div>
+    </section>
+
+    <section> <!--This is the timer-->
+      <div class="container">
+        <h1><img src="./Assets/Images/IndexdLogo.png" id="logo"></h1>
+        <h2 id="quote">Study Success One Card At A Time &copy</h2>
+        <button class="button ">Start Timer</button>
+        <button id="timerButton">Stop Timer</button>
+        <button class="resetButton ">Reset Timer</button>
+      </div>
+      <div id="countDownBox">
+      </div>
+    </section>
+
+
+    <section id="sideBar"> <!--Sidebar that holds created decks-->
+      <h2>Decks</h2>
+      <div id="multipleDecks">
+      </div>
+    </section>
+
     <section class="main-section">
       <section class="randomStudy"> <!--Deck Random-->
-            <div class="indexCards">
-              <h2 class="subjectName">Test Deck1</h2>
-                <div id="questionContainer"></div>
-                <div id="answerContainer"></div>
-                <button id="revealButton">Reveal Answer</button>
-                <button id="nextButton">Next Question</button>
-            </div>
+        <div class="indexCards">
+          <h2 class="subjectName">Test Deck1</h2>
+          <div id="questionContainer"></div>
+          <div id="answerContainer"></div>
+          <button id="revealButton">Reveal Answer</button>
+          <button id="nextButton">Next Question</button>
+        </div>
       </section>
 
       <section> <!--Modal-->
@@ -83,21 +100,21 @@
             </form>
           </div>
         </div>
-      </section>  
-      
-    </section>  
-    </main>
+      </section>
 
-    <footer class="footer">
-      <div>
-        <p>Project 1: Group 1</p>
-      </div>
-      <div id="bottom-footer">
-        <p>&copy Indexd</p>
-      </div>
-    </footer>
+    </section>
+  </main>
 
-    <script src="./Assets/JS/script.js"></script>
-  </body>
+  <footer class="footer">
+    <div>
+      <p>Project 1: Group 1</p>
+    </div>
+    <div id="bottom-footer">
+      <p>&copy Indexd</p>
+    </div>
+  </footer>
+
+  <script src="./Assets/JS/script.js"></script>
+</body>
 
 </html>
