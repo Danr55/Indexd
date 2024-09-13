@@ -98,6 +98,18 @@
   
   }
 
+  .studySection {
+    display:flex;
+    flex-direction: row;
+    gap:200px;
+  }
+
+  .main-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
   .clearDecks {
     position: absolute;
     display: inline-block;
@@ -236,8 +248,8 @@
   background-color: white;
   border-radius: 10px;
   padding:30px;
-  max-width: 500px;
-  width: 90%;
+  width: 500px;
+  height:300px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
