@@ -1,7 +1,7 @@
-const timerButton = document.querySelector(`.button`)
+const timerButton = document.getElementById(`start-timer`)
 const timerBox = document.getElementById(`countDownBox`)
 const timerButton2 = document.getElementById(`timerButton`)
-const timerButton3 = document.querySelector(`.resetButton`)
+const timerButton3 = document.getElementById(`reset-button`)
 let timeSet = 0;
 let timerRunning = false;
 let time;
@@ -204,7 +204,7 @@ function updateSideBar(event) {
     displayDecks();
 }
 
-completeDeck.addEventListener('click', updateSideBar);
+// completeDeck.addEventListener('click', updateSideBar);
 
 function displayDecks() {
     sideBarDecks.innerHTML = ''; // Clear existing sidebar content

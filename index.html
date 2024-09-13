@@ -12,91 +12,118 @@
     <title>Indexd</title>
   </head>
     
-  <body>
-    <header>
+  <body class="bg-[#F8F8F8]">
+
+    <header class="bg-[#F8F8F8]">
+      <div>
+        <nav class="flex flex-row justify-between items-center">
+          <div class="flex items-center">
+            <img class="bg-blue-500 w-72" src="./Assets/Images/IndexdLogo.png" alt="Website Logo">
+            <div class="flex flex-col">
+              <button id="modalBtn" class="m-2 -mt-[70px] p-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition ease-in duration-500">Create Deck</button>
+              <button id="modalBtn" class="m-2 p-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition ease-in duration-500">Clear Decks</button>
+            </div>   
+          </div>   
+          <div class="flex flex-row items-start">
+            <div>
+              <div id="countDownBox" class="m-2 p-2 bg-blue-500 text-white rounded style="height: calc(3 * 40px); width: 100px;"></div>
+            </div>
+            <div class="flex flex-col">
+              <button id="start-timer" class="m-2 -mt-[70px] p-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition ease-in duration-500">
+                Start Timer
+              </button>
+              <button id="timerButton" class="m-2 p-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition ease-in duration-500">
+                Stop Timer
+              </button>
+              <button id="reset-button" class="m-2 p-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition ease-in duration-500">
+                Reset Timer
+              </button>
+            </div>
+          </div>
+        </nav> 
+      </div>
     </header>
 
-    <main class="bg-green-300">
-      <section> <!--Starting button to open the first modal.-->
-          <div id="welcomeModal" class="modal">
-          <img id="welcomeLogo" a href="Assets\Images\IndexdLogo.png">
-          <button id="startButton" class="button">Get started</button>
+    <main>
+      <section id="welcomeModal" class="fixed inset-0 z-10 w-full h-[100%] overflow-auto bg-black bg-opacity-40">
+        <div class="bg-[#024a8945] mx-auto my-[15%] p-5 border border-gray-400 w-[60%] flex flex-col h-[450px] justify-between rounded-[20px] shadow-2xl">
+          <span id="closeBtn" class="text-gray-400 float-right text-[30px] absolute top-[15px] right-[40px] hover:text-black focus:text-black focus:outline-none">&times;</span>
+          <p class="flex text-white px-4 text-center">
+            Indexd is a flashcard app that helps you study more efficiently. Create your own decks and study 
+            them at your own pace. You can also use the timer to help you study for a set amount of time.
+          </p>
+          <br>
+          <button id="startButton" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+            Get started
+          </button>
+          <img class="flex object-center max-w-full max-h-80 mx-auto object-contain" src="Assets\Images\IndexdLogo.png" alt="Indexd logo and tagline">
+          
         </div>
       </section>
 
-      <section> <!--Create deck button outside of the start button-->
-        <div>
-         <button id="modalBtn">Create Deck</button>
-        </div>
-      </section>
+      <section class="flex flex-row gap-[200px]"> 
 
-      <section> <!--This is the timer-->
-        <div class="container">
-          <h1 ><img src="./Assets/Images/IndexdLogo.png" id="logo"></h1>
-          <h2 id="quote">Study Success One Card At A Time &copy</h2>
-          <button class="button ">Start Timer</button>
-          <button id="timerButton"  >Stop Timer</button>
-          <button class="resetButton ">Reset Timer</button>
-        </div>
-        <div id="countDownBox">
-        </div>
-      </section>
-
-     <section class="studySection"> 
-      <section id="sideBar"> <!--Sidebar that holds created decks-->
-        <h2>Decks</h2>
+      <section id="sideBar" class="h-screen w-72 bg-blue-500 relative flex flex-col gap-5 items-center">
+        <h2 class="text-[20px] text-[#91b7a9] font-extrabold">Decks</h2>
         <div id="multipleDecks">
         </div>
       </section>
      
-    <section class="main-section">
-      <section class="randomStudy"> <!--Deck Random-->
-            <div class="indexCards">
-              <h2 class="subjectName">Test Deck1</h2>
-                <div id="questionContainer"></div>
-                <div id="answerContainer"></div>
-                <button id="revealButton">Reveal Answer</button>
-                <button id="nextButton">Next Question</button>
-            </div>
       </section>
-    </section>
 
-      <section> <!--Modal-->
-        <div id="deckModal" class="modal">
-          <div class="modal-content">
-            <span id="closeBtn">&times;</span>
-            <form id="createDeck">
-              <div id="index-entry" class="deckForm">
-                <label for="question">Question:</label>
-                <input type="text" placeholder="Add a question to this card" id="questionContent">
-                <label for="answer">Answer:</label>
-                <input type="text" placeholder="Add the answer to this question" id="answerContent">
-              </div>
-              <div class="addCompleteButtons">
-                <button id="completeBtn"><img src="./Assets/Images/CreateDeck(1).png"></button>
-                <button id="addMoreBtn"><img src="./Assets/Images/AddMore(1).png"></button>
-              </div>
-              <div id="deck-entry" class="deckForm hidden">
-                <label for="deck">Deck:</label>
-                <input type="text" placeholder="Please name your deck" id="deckSubmission">
-                <input type="submit" value="Create" id="completeDeck">
-              </div>
-            </form>
+        <section>
+          <div id="deckModal" class="fixed inset-0 z-10 hidden overflow-auto bg-black bg-opacity-40">
+            <div class="bg-[#024a8945] mx-auto my-[15%] p-5 border border-[#888] w-[60%] flex flex-col h-[350px] justify-between rounded-[20px] shadow-2xl">
+              <span id="closeBtn" class="text-gray-400 float-right text-[30px] absolute top-[15px] right-[40px] hover:text-black focus:text-black focus:outline-none">&times;</span>
+              <div class="flex flex-col items-center justify-center text-white p-5 leading-[35px]">
+                <form id="createDeck" class="w-[400px] text-black">
+                  <div id="index-entry" class="deckForm">
+                    <label for="question" class="text-[20px] text-[#024B89] font-extrabold">Question:</label>
+                    <input type="text" class="w-full text-black" placeholder="Add a question to this card" id="questionContent">
+                    <label for="answer" class="text-[20px] text-[#024B89] font-extrabold">Answer:</label>
+                    <input type="text" class="w-full text-black" placeholder="Add the answer to this question" id="answerContent">
+                  </div>
+                  <div class="flex flex-row justify-between">
+                    <button id="completeBtn" class="rounded-[20px] transition-all duration-1500 ease-out bg-transparent hover:bg-[#024b89]">
+                      <img src="./Assets/Images/CreateDeck(1).png">
+                    </button>
+                    <button id="addMoreBtn" class="rounded-[20px] transition-all duration-1500 ease-out bg-transparent hover:bg-[#024b89]">
+                      <img src="./Assets/Images/AddMore(1).png">
+                    </button>
+                  </div>
+                  <div id="deck-entry" class="deckForm hidden">
+                    <label for="deck" class="text-[20px] text-[#024B89] font-extrabold">Deck:</label>
+                    <input type="text" class="w-full text-black" placeholder="Please name your deck" id="deckSubmission">
+                    <div class="flex flex-row justify-center">
+                      <button id="completeBtn" class="rounded-[20px] transition-all duration-1500 ease-out bg-transparent hover:bg-[#024b89]">
+                        <img src="./Assets/Images/Submit(1).png">
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div> 
+            </div>
           </div>
-        </div>
+        </section>  
+        
       </section>  
-      
-    </section>  
     </main>
 
-    <footer class="footer">
+    <footer>
       <div>
-        <p>Project 1: Group 1</p>
-      </div>
-      <div id="bottom-footer">
-        <p>&copy Indexd</p>
-      </div>
-    </footer>
+        <div class="flex flex-row justify-between items-center">
+          <div class="flex items-center">
+            <content class="bg-blue-500 w-72"></content>    
+          </div>   
+          <div class="flex flex-row items-center">
+            <div class="flex flex-col">
+             <!-- <p>Project1: Group 1</p>
+             <p>&copy Indexd</p> -->
+            </div>
+          </div>
+        </div> 
+       </div>
+       </footer>
 
     <script src="./Assets/JS/script.js"></script>
   </body>
