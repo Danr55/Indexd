@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.10 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.11 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -416,7 +416,7 @@ Make sure disabled buttons don't get the pointer cursor.
    This can trigger a poorly considered lint error in some tools but is included by design.
 */
 
-
+img,
 svg,
 video,
 canvas,
@@ -434,6 +434,11 @@ object {
 Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
 */
 
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
 
 /* Make elements with the HTML hidden attribute stay hidden by default */
 
@@ -549,17 +554,443 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
   --tw-contain-style:  ;
 }
 
+.container {
+  width: 100%;
+}
 
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.inset-0 {
+  inset: 0px;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-\[15\%\] {
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
 
 .block {
   display: block;
 }
 
+.flex {
+  display: flex;
+}
 
+.hidden {
+  display: none;
+}
 
+.h-\[100\%\] {
+  height: 100%;
+}
+
+.h-\[350px\] {
+  height: 350px;
+}
+
+.h-\[450px\] {
+  height: 450px;
+}
+
+.max-h-10 {
+  max-height: 2.5rem;
+}
+
+.max-h-40 {
+  max-height: 10rem;
+}
+
+.max-h-80 {
+  max-height: 20rem;
+}
+
+.w-\[60\%\] {
+  width: 60%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.max-w-full {
+  max-width: 100%;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.rounded-\[20px\] {
+  border-radius: 20px;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-gray-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity));
+}
+
+.bg-\[\#024a8945\] {
+  background-color: #024a8945;
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
 
 .bg-green-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(134 239 172 / var(--tw-bg-opacity));
 }
 
+.bg-opacity-40 {
+  --tw-bg-opacity: 0.4;
+}
+
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.object-center {
+  -o-object-position: center;
+     object-position: center;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.container {
+  /* display: flex;
+  flex-direction: column; 
+  align-items: flex-end; 
+  padding: 20px;
+  margin-top: 100px; 
+  position: relative;
+ 
+  border: 1px solid black; */
+  padding: 40px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+  width: 100%;
+  height: 160px;
+}
+
+#quote{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 10px;
+  top: 120px;
+  left: 60px;
+  position: absolute;
+}
+
+.button{
+  border: 1px solid #ddd;
+  padding: 3px;
+  width: 100px;
+  margin-bottom: 5px;
+  top: 100px;
+  position: absolute;
+  right: 0;
+  font-size: 10px;
+}
+
+#timerButton {
+  border: 1px solid #ddd;
+  padding: 3px;
+  width: 100px;
+  margin-bottom: 5px;
+  top: 80px;
+  position: absolute;
+  right: 0;
+  font-size: 10px;
+}
+
+#logo{
+  top: 10px;
+  width: 130px;
+  left: 50px;
+  position: absolute;
+}
+
+.resetButton{
+  border: 1px solid #ddd;
+  padding: 3px;
+  width: 100px;
+  margin-bottom: 5px;
+  top: 120px;
+  position: absolute;
+  right: 0;
+  font-size: 10px;
+}
+
+#countDownBox {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 1px solid #ddd;
+  padding: 15px;
+  background-color: white;
+}
+
+#sideBar, h2 {
+  font-size: 20px;
+  color: #91b7a9;
+  font-weight: bolder;
+}
+
+#sideBar {
+  height: 100vh;
+  width:15%;
+  background-color: #024b89;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  border-radius: 0 20px 20px 0;
+}
+
+.studySection {
+  display:flex;
+  flex-direction: row;
+  gap:200px;
+}
+
+.main-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clearDecks {
+  position: absolute;
+  display: inline-block;
+  bottom: 10px;
+  border: solid 5px #91b7a9;
+  padding: 10px;
+  transition: ease-in .5s;
+  border-radius: 20px;
+}
+
+.clearDecks:hover {
+  background-color: #91b7a946;
+}
+
+.nav-button:hover {
+  background-color: #021e38;
+  transition: ease-in 0.5s;
+}
+
+#modalBtn {
+  background-color: coral;
+  color:aliceblue;
+  border:solid rgb(248, 9, 9) 1px;
+  border-radius: 10px;
+  width: 100px;
+  height: 50px;
+}
+
+#modalBtn:hover {
+  background-color: rgb(248, 9, 9);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 150%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #024a8945;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  justify-content: space-between;
+  border-radius: 20px;
+}
+
+.deckForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 20px;
+  line-height: 35px;
+}
+
+.deckform, input{
+  width:400px ;
+  color:#000;
+}
+
+.addCompleteButtons{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+#completeBtn:hover {
+  border-radius: 20px;
+  transition: ease-out 1.5s;
+  background-color: #024b89;
+}
+
+#addMoreBtn:hover {
+  border-radius: 20px;
+  transition: ease-out 1.5s;
+  background-color: #024b89;
+}
+
+#closeBtn {
+  color:#ccc;
+  float: right;
+  font-size: 30px;
+  position: absolute;
+  top: 15px;
+  right: 40px;
+}
+
+#closeBtn:hover,.closeBtn:focus{
+  color:#000;
+  text-decoration: none;
+  cursor:pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.footer {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  background-color:#024b89;
+  font-size: 20px;
+}
+
+.randomStudy {
+  display: grid;
+  background-color: white;
+  border-radius: 10px;
+  padding:30px;
+  width: 500px;
+  height:300px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768) {
+  .container{
+    flex-direction: column;
+  }
+}
+
+.hover\:bg-blue-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
