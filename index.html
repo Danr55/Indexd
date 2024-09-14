@@ -58,31 +58,28 @@
             Get started
           </button>
           <img class="flex object-center max-w-full max-h-80 mx-auto object-contain" src="Assets\Images\IndexdLogo.png" alt="Indexd logo and tagline">
-          
         </div>
       </section>
 
       <section class="flex flex-row gap-[200px]"> 
-      <section class="studySection">
-      <section id="sideBar" class="h-screen w-72 bg-blue-500 relative flex flex-col gap-5 items-center">
-        <h2 class="text-[20px] text-[#91b7a9] font-extrabold">Decks</h2>
-        <div id="multipleDecks">
-        </div>
-      </section>
-
-      <section id="main-section">
-        <section class="randomStudy" id="studyCards"> <!--Deck Random-->
-              <div class="indexCards">
-                <h2 class="subjectName"></h2>
-                  <p>Question:</p>
-                  <div id="questionContainer"></div>
-                  <p>Answer:</p>
-                  <div id="answerContainer"></div>
-                  <button id="revealButton">Reveal Answer</button>
-                  <button id="nextButton">Next Question</button>
+        <div class="studySection">
+          <div id="sideBar" class="h-screen w-72 bg-blue-500 relative flex flex-col gap-5 items-center">
+              <h2 class="text-[20px] text-[#91b7a9] font-extrabold">Decks</h2>
+              <div id="multipleDecks">
               </div>
-        </section>
-      </section>
+          </div>
+          <div class="randomStudy" id="studyCards"> <!--Deck Random-->
+            <div class="indexCards">
+              <h2 class="subjectName"></h2>
+              <p>Question:</p>
+              <div id="questionContainer"></div>
+              <p>Answer:</p>
+              <div id="answerContainer"></div>
+              <button id="revealButton">Reveal Answer</button>
+              <button id="nextButton">Next Question</button>
+            </div>
+          </div>
+        </div>
       </section>
 
         <section>
@@ -99,10 +96,10 @@
                   </div>
                   <div class="flex flex-row justify-between">
                     <button id="completeBtn" class="rounded-[20px] transition-all duration-1500 ease-out bg-transparent hover:bg-[#024b89]">
-                      <img src="./Assets/Images/CreateDeck(1).png">
+                      <img src="./Assets/Images/CreateDeck(1).png" alt="create deck button">
                     </button>
                     <button id="addMoreBtn" class="rounded-[20px] transition-all duration-1500 ease-out bg-transparent hover:bg-[#024b89]">
-                      <img src="./Assets/Images/AddMore(1).png">
+                      <img src="./Assets/Images/AddMore(1).png" alt="add more button">
                     </button>
                   </div>
                   <div id="deck-entry" class="deckForm hidden">
@@ -111,7 +108,7 @@
                     <div id="deckSubmissionError" class="text-red-500 text-sm mt-1 hidden"></div>
                     <div class="flex flex-row justify-center">
                       <button id="completeDeck" class="rounded-[20px] transition-all duration-1500 ease-out bg-transparent hover:bg-[#024b89]">
-                        <img src="./Assets/Images/Submit(1).png">
+                        <img src="./Assets/Images/Submit(1).png" alt="submit button">
                       </button>
                     </div>
                   </div>

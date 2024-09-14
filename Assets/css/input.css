@@ -17,7 +17,7 @@
 .nav-button{
   color:white;
   border-radius: 20px;
-}
+}// can be turned to tailwind
 
 .nav-button:hover {
   background-color: #021e384f;
