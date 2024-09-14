@@ -17,6 +17,9 @@ const deckEntry = document.getElementById('deck-entry');
 const sideBarDecks = document.getElementById('multipleDecks');
 const completeDeck = document.getElementById('completeDeck');
 const studyCards =document.getElementById('studyCards');
+const closeBtnWelcome = document.getElementById('closeBtnWelcome');
+const clearDeckBtn = document.getElementById('clearDeckBtn');
+const sideBarBtn = document.getElementsByClassName('nav-button');
 
 let singleDeck = [];    // array for index cards
 let decks = [];     // array for decks
@@ -92,6 +95,12 @@ startButton.onclick = function(){
 };
 startButton.addEventListener('click', openModal) 
 
+function closeWelcome(){
+    welcomeModal.style.display = 'none';
+}
+
+closeBtnWelcome.addEventListener('click', closeWelcome);
+
 //This will open and close the card and deck creator modal
 function openModal(){
     modal.style.display = 'block';
@@ -164,11 +173,14 @@ createDeck.addEventListener('click', function(event) {
 function updateSideBar(event) {
     event.preventDefault();
     let deckName = document.getElementById('deckSubmission').value.trim();
+    let errorElement = document.getElementById('deckSubmissionError');
     
     if (deckName === '') {
-        alert('Please enter a deck name.');
+        showError(errorElement, 'Please enter a deck name.');
         return;
     }
+
+    hideError(errorElement);
 
     let deck = {
         deckName: deckName,
@@ -195,7 +207,10 @@ function updateSideBar(event) {
         button.textContent = d.deckName; // Show deck name on button
 
         button.appendChild(img);
-        button.addEventListener('click', (event) => displayRandomStudy(event));
+        button.addEventListener('click', (event) => {
+            setActiveButton(button);
+            displayRandomStudy(event);
+        });
         sideBarDecks.appendChild(button);
     });
 
@@ -204,6 +219,20 @@ function updateSideBar(event) {
 
     closeModal(); 
     displayDecks();
+}
+
+function showError(element, message) {
+    if (element) {
+        element.textContent = message;
+        element.classList.remove('hidden');
+    }
+}
+
+function hideError(element) {
+    if (element) {
+        element.textContent = '';
+        element.classList.add('hidden');
+    }
 }
 
 if (completeDeck) {
@@ -241,7 +270,23 @@ function displayIndexCard(){
     studyCards.style.display = 'block';
 }
 
+let activeButton = null;
+
+function setActiveButton(button) {
+    if (activeButton) {
+        activeButton.classList.remove('active');
+    }
+    button.classList.add('active');
+    activeButton = button;
+}
+
 function displayRandomStudy(event) {
+
+    const navButton = event.target.closest('.nav-button');
+    if (navButton) {
+        setActiveButton(navButton);
+    }
+
     displayIndexCard();
   const button = event.target.parentNode.innerText;
   function getDeckFromStorage() {
@@ -295,7 +340,13 @@ if (retrievedDeck && retrievedDeck.singleDeck) {
 }
 
 }
+//Clears local storage and refreshes the page to start over
+function clearDecks() {
+    localStorage.clear();
+    studyCards.style.display = 'block';
+    location.reload();
+}  
 
-   
+clearDeckBtn.addEventListener('click', clearDecks);
 
 

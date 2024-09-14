@@ -8,3 +8,27 @@
   display: none;
  
 }
+
+.studySection {
+  display: flex;
+  gap:50px;
+}
+
+.nav-button{
+  color:white;
+  border-radius: 20px;
+}
+
+.nav-button:hover {
+  background-color: #021e384f;
+}
+
+.nav-button.active {
+  transition: ease-in 0.5s;
+  background-color: #021e38;
+}
+
+#studyCards {
+  display: none;
+}
+

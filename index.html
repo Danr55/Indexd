@@ -22,7 +22,7 @@
             <img class="bg-blue-500 w-72" src="./Assets/Images/IndexdLogo.png" alt="Website Logo">
             <div class="flex flex-col">
               <button id="modalBtn" class="m-2 -mt-[70px] p-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition ease-in duration-500">Create Deck</button>
-              <button id="modalBtn" class="m-2 p-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition ease-in duration-500">Clear Decks</button>
+              <button id="clearDeckBtn" class="m-2 p-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition ease-in duration-500">Clear Decks</button>
             </div>   
           </div>   
           <div class="flex flex-row items-start">
@@ -48,7 +48,7 @@
     <main>
       <section id="welcomeModal" class="fixed inset-0 z-10 w-full h-[100%] overflow-auto bg-black bg-opacity-40">
         <div class="bg-[#024a8945] mx-auto my-[15%] p-5 border border-gray-400 w-[60%] flex flex-col h-[450px] justify-between rounded-[20px] shadow-2xl">
-          <span id="closeBtn" class="text-gray-400 float-right text-[30px] absolute top-[15px] right-[40px] hover:text-black focus:text-black focus:outline-none">&times;</span>
+          <span id="closeBtnWelcome" class="text-gray-400 float-right text-[30px] absolute top-[15px] right-[40px] hover:text-black focus:text-black focus:outline-none">&times;</span>
           <p class="flex text-white px-4 text-center">
             Indexd is a flashcard app that helps you study more efficiently. Create your own decks and study 
             them at your own pace. You can also use the timer to help you study for a set amount of time.
@@ -74,7 +74,9 @@
         <section class="randomStudy" id="studyCards"> <!--Deck Random-->
               <div class="indexCards">
                 <h2 class="subjectName"></h2>
-                  <div id="questionContainer"><p></p></div>
+                  <p>Question:</p>
+                  <div id="questionContainer"></div>
+                  <p>Answer:</p>
                   <div id="answerContainer"></div>
                   <button id="revealButton">Reveal Answer</button>
                   <button id="nextButton">Next Question</button>
@@ -106,6 +108,7 @@
                   <div id="deck-entry" class="deckForm hidden">
                     <label for="deck" class="text-[20px] text-[#024B89] font-extrabold">Deck:</label>
                     <input type="text" class="w-full text-black" placeholder="Please name your deck" id="deckSubmission">
+                    <div id="deckSubmissionError" class="text-red-500 text-sm mt-1 hidden"></div>
                     <div class="flex flex-row justify-center">
                       <button id="completeDeck" class="rounded-[20px] transition-all duration-1500 ease-out bg-transparent hover:bg-[#024b89]">
                         <img src="./Assets/Images/Submit(1).png">
@@ -130,8 +133,8 @@
           </div>   
           <div class="flex flex-row items-center">
             <div class="flex flex-col">
-             <!-- <p>Project1: Group 1</p>
-             <p>&copy Indexd</p> -->
+             <p>Project1: Group 1</p>
+             <p>&copy Indexd</p>
             </div>
           </div>
         </div> 
