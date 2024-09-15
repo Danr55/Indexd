@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+body {
+  @apply font-suse;
+}
 
 .hidden {
   display: none;
@@ -11,13 +13,13 @@
 
 .studySection {
   display: flex;
-  gap:50px;
+  gap:450px;
 }
 
 .nav-button{
   color:white;
   border-radius: 20px;
-}// can be turned to tailwind
+}
 
 .nav-button:hover {
   background-color: #021e384f;
@@ -32,3 +34,47 @@
   display: none;
 }
 
+@media (min-width: 768px) {
+  body {
+      height: auto;
+  }
+
+  #indexdLogo {
+    width: 18rem;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+      display: block;
+      height: auto;
+      min-width: 600px;
+  }
+
+  .indexCards {
+    height: 500px;
+    width: 400px;
+  }
+
+  .studySection {
+    gap: 20px;
+  }
+
+  #sideBar {
+    width: 100% !important;
+    padding: 1rem;
+  }
+
+  #indexdLogo {
+    width: 25%;
+
+  }
+
+  #createDeck, input {
+    width: 300px;
+  }
+
+  #deckModal {
+    min-width: 600px;
+  }
+}
