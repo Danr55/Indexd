@@ -621,6 +621,10 @@ video {
   margin-top: 0.25rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .block {
   display: block;
 }
@@ -955,6 +959,11 @@ body {
   background-color: #021e38;
 }
 
+#multipleDecks {
+  display: flex;
+  flex-direction: column;
+}
+
 #studyCards {
   display: none;
 }
@@ -974,15 +983,21 @@ body {
     gap: 75px;
   }
 
+  #timerBtns {
+    margin-top: 80px;
+  }
+
   #sideBar {
     width: 100% !important;
     padding: 1rem;
     height: 731px;
+    width:157px;
     min-width: 157px;
   }
 
   #IndexdLogo {
     width: 157px !important;
+    height: 180px !important;
   }
 }
 
@@ -1002,6 +1017,14 @@ body {
     gap: 20px;
   }
 
+  #timerBtns {
+    margin-top: 80px;
+  }
+
+  #welcome {
+    min-width: 320px;
+  }
+
   #sideBar {
     width: 100% !important;
     padding: 1rem;
@@ -1010,6 +1033,7 @@ body {
 
   #IndexdLogo {
     width: 157px !important;
+    height: 180px !important;
   }
 
   #createDeck, input {
