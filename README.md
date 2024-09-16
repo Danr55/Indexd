@@ -1,4 +1,4 @@
-# Indexd: Index card App
+# 📚Indexd: Index card App
 
 Indexd is a web-based index card application designed to help users study more efficiently. It allows users to create their own decks of index cards and study them at their own pace. The app also includes a timer feature to help users manage their study sessions.
 
@@ -41,8 +41,11 @@ Indexd is a web-based index card application designed to help users study more e
 
 ### Project Link: 
 
+https://danr55.github.io/Indexd/
+
 ### Repository Link:
 
+https://github.com/Danr55/Indexd
 
 ## Collaborators
 
