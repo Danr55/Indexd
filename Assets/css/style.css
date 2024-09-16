@@ -621,12 +621,17 @@ video {
   margin-top: 0.25rem;
 }
 
+<<<<<<< HEAD
 .-mt-\[0px\] {
   margin-top: -0px;
 }
 
 .-mt-\[90px\] {
   margin-top: -90px;
+=======
+.mt-2 {
+  margin-top: 0.5rem;
+>>>>>>> e1bc86456195fc783abea3a079e05e71ed289ca6
 }
 
 .block {
@@ -987,6 +992,10 @@ body {
     gap: 75px;
   }
 
+  #timerBtns {
+    margin-top: 80px;
+  }
+
   #sideBar {
     width: 100% !important;
     padding: 1rem;
@@ -997,6 +1006,7 @@ body {
 
   #IndexdLogo {
     width: 157px !important;
+    height: 180px !important;
   }
 }
 
@@ -1016,6 +1026,14 @@ body {
     gap: 20px;
   }
 
+  #timerBtns {
+    margin-top: 80px;
+  }
+
+  #welcome {
+    min-width: 320px;
+  }
+
   #sideBar {
     width: 100% !important;
     padding: 1rem;
@@ -1024,6 +1042,7 @@ body {
 
   #IndexdLogo {
     width: 157px !important;
+    height: 180px !important;
   }
 
   #createDeck, input {
