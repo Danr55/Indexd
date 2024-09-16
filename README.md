@@ -2,6 +2,21 @@
 
 Indexd is a web-based index card application designed to help users study more efficiently. It allows users to create their own decks of index cards and study them at their own pace. The app also includes a timer feature to help users manage their study sessions.
 
+## User Story
+
+### Given
+
+As a student I want a structured, yet flexible tool to help me study and learn.
+
+### When
+
+I open INDEXD, I see a prompt to create a deck and enter question and answer pairings. I can enter as many as I’d like that I can organize and save into decks using local storage. 
+
+### Then
+
+I can set a timer to track the time spent studying. I’m able to select a deck which will show randomized cards, one question at a time. When I click the relevant trigger, the answer is revealed. This continues until I want to end my study session. 
+
+
 ## Features
 
 * Create custom index card decks.

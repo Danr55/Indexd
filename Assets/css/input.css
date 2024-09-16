@@ -30,6 +30,9 @@ body {
   background-color: #021e38;
 }
 
+#closeBtn:hover, #closeBtnWelcome:hover {
+  cursor:pointer;
+}
 #multipleDecks {
   display: flex;
   flex-direction: column;
@@ -116,10 +119,10 @@ body {
   }
 
   #createDeck, input {
-    width: 300px;
+    width: 250px;
   }
 
   #deckModal {
-    min-width: 600px;
+    min-width: 480px;
   }
 }
